@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
   
       - name: Log in to DockerHub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t stevenfeltner/nastycontainer:int -f Dockerfile .
+        run: docker build -t stevenfeltner/nastycontainer:latest -f Dockerfile .
       
       - name: Push Docker image
-        run: docker push stevenfeltner/nastycontainer:int
+        run: docker push stevenfeltner/nastycontainer:latest
