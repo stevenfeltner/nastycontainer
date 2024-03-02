@@ -15,6 +15,7 @@ spec:
       containers:
       - name: nastycontainer
         image: stevenfeltner/nastycontainer
+        imagePullPolicy: Always
         command: ["sleep", "infinity"]
         securityContext:
           privileged: true 

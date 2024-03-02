@@ -15,7 +15,8 @@ spec:
       containers:
       - name: nastycontainer
         image: stevenfeltner/nastycontainer
-        command: ["/app/entrypoint.sh", "-t"]
+        imagePullPolicy: Always
+        command: ["/app/entrypoint.sh", "-s"]
         securityContext:
           privileged: true  
         volumeMounts:

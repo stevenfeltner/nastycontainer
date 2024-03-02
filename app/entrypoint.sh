@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Argument passed to script: $1"
+
 if [ "$1" = "-s" ]; then
     # Enter sleep mode
     echo "(In sleep/silent mode...)"
