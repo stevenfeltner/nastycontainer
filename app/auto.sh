@@ -10,9 +10,9 @@ controlc()
 trap controlc 2
 
 directories=(
-  "/app/scenarios/process"
-  "/app/scenarios/network"
-  "/app/scenarios/cloudlogs"
+  "./scenarios/process"
+  "./scenarios/network"
+  "./scenarios/cloudlogs"
 )
 
 # Get available tests

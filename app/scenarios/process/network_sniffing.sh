@@ -4,5 +4,5 @@
 # Policy: Network sniffing
 # Collection:Process/NetworkSniffing.NetworkSniffExecuted
 
-# Start tcpdump to capture 10 packets and then stop.
-tcpdump -i any -c 10
+# Start tcpdump to capture for 5
+sudo tcpdump -i any -W 1 -G 5 -w /tmp/output-%Y%m%d%H%M%S.pcap

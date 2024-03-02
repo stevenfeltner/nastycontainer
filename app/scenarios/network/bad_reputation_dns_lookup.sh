@@ -3,4 +3,4 @@
 # Type: Network
 # Policy: Lookup Ip Services DNS
 
-telnet icanhazip.com
+timeout 30 telnet icanhazip.com <<< "quit"

@@ -1,4 +1,8 @@
 #!/bin/bash
+# Make all files in the directory executable
+find . -type f -exec chmod +x {} \;
+./install.sh
+
 show_menu(){
     normal="\033[m"
     menu="\033[36m" #Blue
@@ -9,21 +13,21 @@ show_menu(){
     version="0.1"
 
     mitems=(
+           "Bad Reputation DNS Lookup"
            "Bad Reputation IPs"
            "Paste Services DNS"
-           "Bad Reputation DNS Lookup"
            "Attempt to Find AWS Credentials"
            "Compliler Execution"
            "Container Management Utility (kubectl)"
            "Cryptominer"
-           "Modify User Password (Ubuntu)"
+           "Modify User Password"
            "Malware"
            "Network Scan"
            "Network Sniffing"
            "Reverse shell"
            )
 
-    edir='/app/scenarios/'
+    edir='./scenarios/'
 
     eitems=(
            "network/bad_reputation_dns_lookup.sh"
@@ -55,15 +59,14 @@ show_menu(){
     printf "\n"
     printf "${menu}**${number} a)${menu} Automatically run random scripts${normal}\n"
     printf "\n"
-    printf "${menu}**${number} e)${menu} Exit to Container shell${normal}\n"
-    printf "${menu}**${number} x)${menu} Exit Container${normal}\n"
+    printf "${menu}**${number} x)${menu} Exit${normal}\n"
     printf "${menu}*********************************************${normal}\n"
     printf "Please enter a menu option and enter: "
     read opt
 }
 
 after_exec(){
-    read -p "Press enter to continue";
+    read -p "Completed: Press enter to continue";
     clear;
     show_menu;
 }

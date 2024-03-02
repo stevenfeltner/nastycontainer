@@ -5,9 +5,7 @@
 # CredentialsAccess:Process/ContainerLocalUserPasswordModified
 
 # Create a new user for testing (replace 'testuser' with your preferred username)
-useradd -m testuser
+sudo useradd -m testuser
 
 # Change the password for the newly created user
-echo "testuser:newpassword" | chpasswd
-
-
+sudo echo "testuser:newpassword" | sudo chpasswd
