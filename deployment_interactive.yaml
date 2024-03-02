@@ -15,7 +15,7 @@ spec:
       containers:
       - name: nastycontainer
         image: stevenfeltner/nastycontainer
-        command: ["sleep", "infinity"]
+        command: ["/app/entrypoint.sh", "-t"]
         securityContext:
           privileged: true  
         volumeMounts:
